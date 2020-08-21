@@ -1,0 +1,403 @@
+@font-face {
+    font-family: 'Mason Chronicles';
+    src: url('../fonts/MasonChronicles.woff') format('woff2'),
+         url('../fonts/MasonChronicles.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #141218;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* background: linear-gradient(180deg, rgba(20, 18, 24, 0) 59.28%, #141218 100%), 
+     linear-gradient(270deg, #141218 3.38%,  rgba(20, 18, 24, 0) 10.43%), 
+     linear-gradient(179.45deg, #141218 0.55%, rgba(20, 18, 24, 0) 8.71%), 
+     radial-gradient(34.78% 125.62% at 72.8% 56.48%, rgba(20, 18, 24, 0.33) 20.93%, #141218 100%),
+     url(../img/background.jpg); */
+     background-image: url(../img/background.jpg);
+    background-position: top right 35%;
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+    color: #fff
+}
+.container{
+    width: 95%;
+    max-width: 1140px;
+    margin: auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    margin-bottom: 90px;
+}
+.menu-list{
+    margin-right: auto;
+    margin-left: 67px;
+}
+.menu-link{
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 24px;
+    padding-bottom: 5px;
+}
+.menu-link::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background-color: #9D2929;
+    transform: scale(0);
+    transition: transform .2s;
+
+}
+.menu-link:hover:after{
+    transform: scale(1);
+}
+.social-link{
+    text-decoration: none;
+}
+.social-link:not(:last-child){
+    margin-right: 20px;
+
+}
+
+/* MAIN CONTENT */
+.main-content{
+    display: flex;
+    align-items: center;
+    margin-bottom: 85px;
+}
+.genre{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    display: block;
+    animation-delay: .1s;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    animation-delay: .3s;
+
+}
+.rating-number{
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 10px;
+}
+
+.main-title{
+    font-size: 76px;
+    line-height: 89px;
+    font-family: 'Mason Chronicles',serif;
+    margin-bottom: 10px;
+    animation-delay: .5s;
+}
+.main-description{
+    font-size: 14px;
+    line-height: 150%;
+    max-width: 450px;
+    margin-bottom: 40px;
+    animation-delay: .7s;
+}
+.watch{
+    display: inline-block;
+    background: #9D2929;
+    border-radius: 8px;
+    padding: 22px 72px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    /* transition: transform .3s ease-in; */
+    animation-delay: 1s;
+}
+.watch:active{
+    color: #FFFFFF;
+}
+.watch:hover{
+    background:#6b1a1a;
+    transition: transform .3s ease-in;
+}
+.play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: #9D2929;
+    border-radius: 50%  ;
+    border: none;
+    position: relative;
+    margin: auto;
+}
+.play:hover{
+    transform: scale(1.2);
+    transition: transform .3s ease-in;
+    background:#6b1a1a;
+}
+.play-img{
+   position: relative;;
+   transform: translateX(5px);
+}
+.play::before{
+    content:'';
+    width: 132px;
+    height: 132px;
+    background: #9D2929;
+    opacity: .5;
+    position: absolute;
+    border-radius: 50%  ;
+    left: -16px;
+    top: -16px;
+    animation: pulse 1.5s ease-in-out 2s infinite;
+}
+/* /.MAIN CONTENT */
+
+
+/* EPISODES */
+.episodes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    max-width: 420px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 13px;
+    width: 164px;
+    height: 113px;
+    border-radius: 8px;
+    margin-right: 30px;
+}
+.episode-1{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-2{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-3{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-4{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-5{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-6{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-7{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.episode-8{
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),url(../img/episode8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-subtitle{
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 2px;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+.arrow{
+    width: 32px;
+    height: 23px;
+    border:none;
+    background-image: url(../img/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    position: absolute;
+    top:50%;
+    right: -35px;
+}
+.arrow:hover{
+    transition: transform .3s ease-in;   
+    transform: translateX(20%);
+}
+.swiper-container{
+    max-width: 420px;
+    margin-left: 0 !important;
+}
+/* /.EPISODES */
+
+/* FOOTER */
+.footer{
+    /* background: #141218; */
+    padding:20px 0;
+    background: linear-gradient(to bottom, rgba(20, 18, 24, 0) 15.28%, #141218 100%);
+    /* margin-top: auto; */
+}
+.footer-link, .copyright{
+    color: #3A383D;
+}
+.footer-link:not(:last-child){
+    margin-right: 25px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* FOOTER */
+
+.menu-btn{
+    display: none;
+}
+/* media */
+@media (max-width: 760px){
+    .play{
+        display: none;
+    }
+    .footer-content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .copyright{
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 540px){
+    .menu-btn{
+        display: block;
+        position: absolute;
+        top:40px;
+        right:35px;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    /* .menu-btn:hover{
+        transition: 1s;
+        transform: rotate(90deg);
+    } */
+    .menu-btn-active{
+        height: 0;
+    }
+    .menu-btn-active:before{
+        transform: rotate(45deg);
+        margin-top: 0 !important;
+    }
+    .menu-btn-active:after{
+        transform: rotate(-45deg);
+        margin-top: 0 !important;
+    }
+    .menu-btn::before{
+        content:'';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: -7px;   
+        transition: transform .2s; 
+    }
+    .menu-btn::after{
+        content:'';
+        display: block;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 7px;  
+        transition: transform .2s;   
+    }
+    .header{
+        display:none;
+        flex-direction: column;
+        position: absolute;
+        top:0;
+        background-color: #9D2929;
+        right: 0;
+        width: 250px;
+        padding-top: 25px;
+        padding-bottom: 40px; 
+    }
+    .header-active{
+        display: flex;
+        transition: transform .2s;  
+    }
+    .logo{
+        margin-bottom: 25px;
+    }
+    .menu-list{
+        order:2;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-link{
+        margin-bottom: 17px;
+        margin-right: 0;
+    }
+    .social{
+        order:1;
+        margin-bottom: 22px;
+    }
+    .main-content{
+        margin-top: 195px;
+    }
+    .main-title{
+        font-size: 56px;
+    }
+    .episodes{
+        width: 60%;
+    }
+}
